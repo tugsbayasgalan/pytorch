@@ -7,11 +7,14 @@ import torch.nn.intrinsic.quantized as nniq
 import torch.multiprocessing as mp
 
 # graph mode quantization based on fx
-from torch.quantization import (
-    QuantType,
+from torch.quantization.quantize_fx import (
     prepare_fx,
     convert_fx,
     prepare_qat_fx,
+)
+
+from torch.quantization import (
+    QuantType,
     default_qconfig,
     default_dynamic_qconfig,
     default_dynamic_quant_observer,
