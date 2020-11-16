@@ -1625,6 +1625,7 @@ Node* Graph::createTupleSlice(
       output_types.push_back(tuple_type->elements().at(i));
     }
   }
+
   auto tt = TupleType::create(std::move(output_types));
   n->output()->setType(tt);
   return n;
